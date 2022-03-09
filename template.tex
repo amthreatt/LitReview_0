@@ -1,0 +1,74 @@
+\documentclass[10pt,twocolumn]{article} 
+
+\usepackage{oxycomps} % use the main oxycomps style file
+
+
+\bibliography{references}
+
+\pdfinfo{
+    /Title (Writing Your Oxy CS Comps Paper in LaTeX)
+    /Author (Justin Li)
+}
+
+\title{Oxy Comps Paper Part 1 \LaTeX}
+
+\author{Amelia Threatt}
+\affiliation{Occidental College}
+\email{athreatt@oxy.edu}
+
+\begin{document}
+
+\maketitle
+
+\section{Problem Context}
+Every year California Public School and Charter School students, third to eighth grade and eleventh grade, take a standardized test. This test covers English language arts and mathematics. Of those two subjects, they get broken down into a few categories to create a well-rounded exam to assess how well the students are learning new material accurately. These test results have continually shown that students perform better in English language arts instead of Mathematics. This noticeable trend brought common core math teaching to California schools; however, this disparity in test results still stands. \cite{noauthor_california_nodate}
+ 
+There are several reasons why a student may struggle with math; many other learning differences can attribute to work to learn math, such as dyscalculia, dysgraphia, dyslexia, visual processing disorders, or add/ADHD much more that were not mentioned \cite{noauthor_why_nodate}. Along with those previously mentioned learning differences, math anxiety is an issue some students can suffer from without having a learning difference attached to it. Essentially everyone who struggles with math struggles differently from the next person. However, there are identifiable fundamentals where the challenges lie.  
+ 
+Many different teaching techniques have been designed to best help students in and outside of class with the education of math and other subjects. One way of teaching is a sort of the modified Orton Gillingham methodology adapted for mathematics teaching and a focus of evidence-based instruction. Orton and Gillingham were researchers who focused on reading struggles, and language processing disorders, along with dyslexia, they together created a set of teaching principles. The Orton-Gillingham approach is a “direct, explicit, multisensory, structured, sequential, diagnostic, and perspective way to teach literacy when reading, writing, and spelling” \cite{ahearn_what_2016}. The Orton-Gillingham method was designed for reading and writing; however, educators have begun implementing this approach into maths teaching. In math teaching the methodology starts by creating concrete examples for students so creating more hands-on examples when teaching, and then finally converting what they have learned into math symbols and numbers. Essentially the OG approach in math does use the multisensory aspect with the concrete examples, but along with that the teaching is data-driven, it will implement direct connections between previous material and new material, and immediate feedback \cite{noauthor_why_nodate}. Along with the OG methodology, there is evidence-based math teaching that has been helping develop the way math is taught. Evidence-based math has four main focuses: explicit instruction, visual representation, schema-based instruction, and peer interaction \cite{noauthor_evidence-based_nodate}. The aspect of evidence-based teaching that can be applied to virtual tutoring will be explicit instruction which is a way of making the learning process very clear; this helps students not have to guess what to do as often. Breaking down a problem into clear and identifiable steps can be helpful for students who cannot retain everything at once. As well as the evidence-based instruction a website provides the option to also implement visual representations as well. 
+Online tutoring is not new, especially due to the pandemic there has been a lot of services that have transferred online. With most typical online tutoring services, there is a cost attached, but with that being said you are provided with live one on one tutoring. However, the price of these services recessed the accessibility to math education aids, although a website is not a person have access to a free and comprehensive response to a student input can be helpful when a one on one tutor is not an option. 
+ 
+With all that said, the main points of math education I want to bring to this website are structured and sequential aspects from OG, along with the immediate feedback, and having clear and identifiable prompts for the student to help guide to the next step in an algebraic problem. But most importantly what I have taken from my research will be the visual aspects of the website. Typing math symbols into a computer have not always been so easy, but websites like Wolfram alpha have made great efforts to make mathematical user input much easier. 
+
+
+
+
+\section{Technical Background}
+The main algorithmic details of this website revolve around interpreting and organizing the user input, and then with that understanding how to use the information to best help the student. Wolfram Alpha for example is a powerful online calculator that with a premium subscription provides step by step details for a problem. To provide the step by step information as well as preform the computations the website uses its own programming language in combination with Mathematica. However this is not the approach all online calculators use, and is not the approach that will be used for this new website. Due to the capacity of the website the user is confined to only inputting quadratic, or just simple algebra problems. With that being said the step by stem functionality of the website can be implemented by converting the equation to a tree data structure.   
+
+In the wolfram programming cloud, it uses its own language; however, it gives access to a number of mathematical tools that will be helpful in the creating of this website. The wolfram language is said to be the only full scale computational language; the language already has a number of complex algorithms worked into it, making high level computation much easier. Although the website planned does not require high level computation, it will require a lot of small computations after every input. 
+
+However, the complexity of the calculation performed will not be extensive, I have decided to set the focus of this website on being able to take in any quadratic equation. The website will create specialized steps, prompts to guide the student and real-time checking of their inputs as they work towards the solution. With that being said, this website will be built using JavaScript. The construction of this website will be inspired by an online integral calculator website https://www.integral-calculator.com/. So similar to this website I will use JavaScript to create a parser to take the user input and configure it into a tree to then use to guide the students work with step by step prompts. With each prompt it will take in a user input, I will also be checking that input to make sure the student performed the math correctly as this step. To display the information and perform the computations I will use Maxima; this will help produce a clean output because Maxima works with \LaTeX. Lastly, to parse the input into a tree, I will use the Shunting-yard algorithm, this algorithm was created by Dijkstra  and utilizes stacks and queues to help shape the tree. The Shunting-yard algorithm essential runs through the input and if there is a number, or also variable it will get added to a queue. The operator is pushed onto the stack, the operator are continually pushed and popped to account for some operator having higher precedence over others. \cite{noauthor_shunting-yard_2022} 
+
+\section{Prior Work}
+Many online calculators provide step by step solutions to a problem however a difference between mine and other websites is my step by step solution will be user-inspired. Essentially the user will be writing out the step by step solution themselves. The new website however will be checking to see if the steps attempted are correct, along with that if a step is incorrect then the website will also provide guiding prompts to help get the student back on track towards the correct solution. 
+
+With that being said, the other online calculators are helpful in showing what are helpful design elements and approaches towards creating this website. For example, Wolfram Alpha is not only capable of complicated computations it also has a clean design and an understandable interface. Another important online calculator that has been a big inspiration for my website is https://www.integral-calculator.com/. 
+
+Aside from online calculators, there exists a Math Robot tutor that does provide real-time feedback for the student as well as providing why an answer is correct or not. This math robot is called ABii, along with the fully autonomous physical robot body it also has a comprehensive online math teaching program along side with it. A qualm with the ABii is  the price tag, the price of the ABii k-5 School Edition+ is $1499.00$. Although this robot can be a very useful teaching tool, this price makes it inaccessible to lower-income students or schools. 
+
+Even with Wolfram Alpha to get access to the premium website has a monthly cost. Adding fees to these websites and tools automatically reduces the accessibility to education tools. As mentioned, math education is still developing. The implementation of new math tools can help with that development, but realistically only if those tools are accessible to all types of students. 
+
+Now as for automated online math tutoring machines, I have found one that uses machine learning to really lean into the personalized teaching information. The website will attempt to become an intelligent tutoring system. An intelligent tutoring system have been made before, the definition for an intelligent tutoring system is a computer system that provides personalized and immediate feedback for a student.  
+
+\begin{comment}
+No definition citations, unless the term itself is in dispute
+Separate problem background from technical background
+    Unclear if games and apps require much technical background
+    The general structure of the framework might be better suited for the Architecture Overview section
+        Eg. Flask uses decorators to associate functions with URLs
+        Eg. Unity has scripts associated with objects and specific triggers, such as walking into an area, pressing a button, etc.
+    Maybe a better name is "algorithmic background"?
+        Should explore what does and doesn't count
+            All ML counts
+            App and game frameworks do not
+        Framework vs. library?
+            I like the idea of [inversion of control](https://martinfowler.com/bliki/InversionOfControl.html), but that may be too abstract for students to understand
+        Heuristic: is understanding that system necessary to understand the results?
+            Ie. How Flask or Unity works doesn't influence whether the app/game is useful/fun/engaging
+            But how (say) linear regression works is highly relevant for why the results match/don't match the actual values
+\end{comment}
+
+\printbibliography 
+
+\end{document}
