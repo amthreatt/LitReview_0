@@ -51,6 +51,37 @@ Even with Wolfram Alpha to get access to the premium website has a monthly cost.
 
 Now as for automated online math tutoring machines, I have found one that uses machine learning to really lean into the personalized teaching information. The website will attempt to become an intelligent tutoring system. An intelligent tutoring system have been made before, the definition for an intelligent tutoring system is a computer system that provides personalized and immediate feedback for a student.  
 
+\section{Ethical Consideration}
+ In the construction of an automated online math tutoring machine, there are ways to address some ethical concerns however it is not possible to provide a solution to all concerns on the one website. This is because when addressing one learning disability the implications could be negative for a different learning disability, other than learning disabilities educational websites are not optimal for accessibility, given the scope of this website only being able to solve algebraic problems this tool will concentrate the power to a small group of math students. 
+
+Intelligent tutoring systems can be helpful in increasing the accessibility of tutoring to more people, especially if the website is free which mine will be. The website being free will remove any financial burden that may come with hiring a tutor. Utilizing the web platform will also allow the student to access the information and help at any time, and from anywhere which may be helpful for students with mobility issues. Although these systems can be helpful to some it does come with some pitfalls of being unable to provide everyone with everything they need for the website to be most successful. 
+
+There are instances where an online intelligent tutoring system is not going to be beneficial for some students, due to various accessibility issues, cognitive and learning disorders, and physical impairments. At this point and time not everyone has access to the internet, and even if they do not everyone is knowledgeable about the internet and how some devices work. Websites inherently are not completely accessible.
+
+Due to the lack of accessibility within the internet, the website will be monopolizing power to people who have access to the internet which is not an equally diverse group of people, along with that the website will be most easily accessible to those with computer literacy and are able to navigate the website from a compatible device. 
+
+In an attempt to create a fully ethical website the designer should take into account all forms of where accessibility will be challenged and create a solution, however, a solution for one problem could create an entirely new problem for another people. To an extent the accessibility features can be user-customized but at what point will all forms of inaccessibility be challenged begging the question of technological solutionism. At the end of the day, in-person tutors came first, intelligent tutoring systems came afterward, if there a way to design a website full capable of the personalization an in-person tutor could provide?
+
+\section{Methods}
+This website will mainly be built in VS code, it is a ideal text editor to use due to the fact that it supports so many languages. Aside from just that it's interface is considered easy to use and understand for a beginner web developer. VS code utilizes smart bracket and contrasting colors to help coders as they work. Along with that VS code has a great function for AutoClose tag and Auto Rename Tag, do help reduce the struggles that come with generating tags and their children. Beyond just those elements there is smart indentation, settings that enforce consistent style when editing, and a large selection of color ways for the website all designed to help the web developer  \cite{gupta_vs_2019}
+
+In VS Code I will be using CSS and HTML for the general web application development, however in those programs there are some important algorithms that will be used to create the overall experience of the website. For example the Shunting Yard Algorthm will be used to produce a stack for the order of operations to be preformed. The Shunting Yard Algorithm uses stacks and queues to hold the number values and the function operators. So, when looping through each element of the function if the element is a number it is put onto the output queue, and if it an operator of greater presedence than the previous one then it gets pushed onto the stack. If it is not of greater percendence then the current stack gets popped to the output queue and the new operator starts the new stack. Once Shunting Yard Algorithm is completed it produces the reverse polish notation of the function which will then be used to check a students work for accuracy.   
+
+Once the Shunting yard algorithm is completed to check the students work I will be comparing whatever operation they are doing and seeing if it is the inverse of a current operation in the output queue that has just been made. If not the student will be prompted to try again, and it it is the the queue will be updated to reflect the missing operation. 
+
+
+
+\section{Evaluation}
+To evaluate the website I will need to check for three things, does the website work, is it usable and does the website succeed in its goal. 
+
+The website works if it steers the student in the direction of the correct answer as opposed to simply proving the step by step. In doing so the website should be able to identify where a student made a mistake and then provide help getting it to the correct answer. To test this aspect I will use curate a set of commonly made errors in algebra to see if the website catches them and then properly addresses them.  %The Califorina standardized testing has a lot of this information 
+
+Nest to see if the website is usable there are some key functionality items that need to be addressed. Such as can the website take in a mathematical input? Next can it recognize and problem it can solve, or a problem it cannot solve? Lastly does it provide the helpful guidance and is the math on the website readable? To check if my website can take in a mathematical problem I will be test inputting problems I know it can solve and problems I know it cannot solve. It should provide a response to the problems it cannot solve the student knows that this website unfortunately cannot help them with their problem. 
+
+Testing the usefulness of the websites guiding questions will be tested more so in the question of did the app succeed in its goal. After providing the students with problem set to not only test their knowledge but also test the efficacy of the website I will also provide a set of qualitative questions to gauge the usefulness of the website for a student.
+
+
+
 \begin{comment}
 No definition citations, unless the term itself is in dispute
 Separate problem background from technical background
